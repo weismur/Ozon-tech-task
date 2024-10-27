@@ -11,7 +11,7 @@ class ProgressBarComponent extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     const radialProgress = this.shadowRoot.getElementById("radial-progress");
     if (name === "progress-value") {
-      const value = 0 <= newValue && newValue <= 100 ? newValue : 0;
+      const value = 0 < +newValue && +newValue <= 100 ? newValue : 0;
       radialProgress.style.cssText += `background: radial-gradient(closest-side, white 83%, transparent 80% 100%),
         conic-gradient(#005CFF ${value}%, #EAF0F6 0);`;
     }
