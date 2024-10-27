@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Bar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="progressBarComponent.js" defer></script>
+</head>
+<body>
+<div class="progress__wrapper">
+  <progress-bar-component progress-value="1" is-animated="true" is-hidden="false"></progress-bar-component>
+  <div class="buttons__wrapper">
+    <div class="switch__wrapper">
+      <input type="number" id="value__input" min="0" max="100" value="0" />
+      <label for="value__input">Value</label>
+    </div>
+    <div class="switch__wrapper">
+      <div class="switch__button" data-checked="false" id="animate__button">
+        <span class="switch__indicator"></span>
+      </div>
+      <p>Animate</p>
+    </div>
+    <div class="switch__wrapper">
+      <div class="switch__button" data-checked="false" id="hidden__button">
+        <span class="switch__indicator"></span>
+      </div>
+      <p>Hide</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
